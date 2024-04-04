@@ -1,0 +1,42 @@
+/* Setting background colour and font type */
+body{
+	background-color: #c9f2f2;
+	font-family: 'Times New Roman', Times, serif;
+}
+/* Setting Heading 1 font type and size */
+h1{ font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    
+
+}
+/* Setting heading 2 font type and size */
+h2{
+    
+   margin-left :100px;
+    text-align: center;
+    font-weight: 900;
+}
+/* Setting paragrapha allignment, font and line height */
+p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 200%;
+    
+}
+/* Heading 3 decoration and allignment */
+h3{ text-decoration: underline;  
+    text-align: center;
+
+}
+/* made font size small for this class Because I dont like legs */
+.boo-legs{
+    font-size: xx-small;
+}
+/* Adding another optino for paragraph options */
+.para{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 200%;
+    
+}
