@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css')}}">
+    <title>Breast Cancer Scan Results </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='styles/parallax.min.js')}}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+
+
+
+</head>
+
+<div class="parallax-window" data-parallax="scroll" data-image-src="">
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li style="float:right"><a class="active" href="about">About</a></li>
+    </ul>
+</div>
+
+<style>
+
+
+    .parallax-window {
+        min-height: 500px;
+        background: transparent;
+    }
+</style>
+
+
+
+<body>
+
+    <div class="explaination">
+        <h2 class="abouth3"> About This Platform</h2>
+        <p class="info">
+            This web application is based off of breast scan data and can detect breast cancer within a patient
+            based off of the data the scan gathers, input of the data will produce a 97% accuracy score.<a class="colorthisa"
+                                                                       href="https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data">Click Here.</a>
+        </p>
+    </div>
+
+
+    <h3>Breast Cancer Detection</h3>
+
+
+    <!-- Form -->
+    <div class="complete_form">
+        <form action="/send" method="POST">
+
+            <div class="container1">
+                <label for="RadiusMean">Radius Mean: </label>
+                <input type="number" required
+                       placeholder="Radius Mean..."
+                       name="Radius Mean" />
+
+                <label for="TextureMean">Texture Mean: </label>
+                <input type="number" required
+                       placeholder="Texture Mean..."
+                       name="texture_m" />
+
+                <label for="PerimeterMean">Perimeter Mean: </label>
+                <input type="number" required
+                       placeholder="Perimeter Mean..."
+                       name=perimeter_m'" />
+
+                <label for="AreaMean">Area Mean: </label>
+                <input type="number" required
+                       placeholder="Area Mean..."
+                       name="area_m" />
+
+                <label for="SmoothnessMean">Smoothness Mean: </label>
+                <input type="number" required
+                       placeholder="Smoothness Mean..."
+                       name="smoothness_m" />
+
+                <label for="CompactnessMean">Compactness Mean: </label>
+                <input type="number" required
+                       placeholder="Compactness Mean..."
+                       name="compactness_m" />
+
+                <label for="ConcavityMean">Concavity Mean: </label>
+                <input type="number" required
+                       placeholder="Concavity Mean..."
+                       name="concavity_m" />
+
+                <label for="ConcavePointsMean">Concave Points Mean: </label>
+                <input type="number" required
+                       placeholder="Concave Points Mean..."
+                       name="concave_m" />
+
+                <label for="SymmetryMean">Symmetry Mean: </label>
+                <input type="number" required
+                       placeholder="Symmetry Mean..."
+                       name="symmetry_m" />
+
+                <label for="FractalDimMean">Fractal Dimension Mean: </label>
+                <input type="number" required
+                       placeholder="Fractal Dimension Mean..."
+                       name="frac_dim_m" />
+
+
+
+            </div>
+
+            <div class="container2">
+                   <label for="RadiusSE">Radius Standard Error: </label>
+                <input type="number" required
+                       placeholder="Radius Standard Error..."
+                       name="radius_se" />
+
+                <label for="TextureSE">Texture Standard Error: </label>
+                <input type="number" required
+                       placeholder="Texture Standard Error..."
+                       name="texture_se" />
+
+                <label for="PerimeterSE">Perimeter Standard Error: </label>
+                <input type="number" required
+                       placeholder="Perimeter Standard Error..."
+                       name="perimeter_se" />
+
+                <label for="AreaSE">Area Standard Error: </label>
+                <input type="number" required
+                       placeholder="Area Standard Error..."
+                       name="area_se" />
+
+                <label for="SmoothnessSE">Smoothness Standard Error: </label>
+                <input type="number" required
+                       placeholder="Smoothness Standard Error..."
+                       name="smoothness_se" />
+
+                <label for="CompactnessSE">Compactness Standard Error: </label>
+                <input type="number" required
+                       placeholder="Compactness Standard Error..."
+                       name="compactness_se" />
+
+                <label for="ConcavitySE">Concavity Standard Error: </label>
+                <input type="number" required
+                       placeholder="Concavity Standard Error..."
+                       name="concavity_se" />
+
+                <label for="ConcavePointsSE">Concave Points Standard Error: </label>
+                <input type="number" required
+                       placeholder="Concave Points Standard Error..."
+                       name="concave_point_se" />
+
+                <label for="SymmetrySE">Symmetry Standard Error: </label>
+                <input type="number" required
+                       placeholder="Symmetry Standard Error..."
+                       name="symmetry_se" />
+
+                <label for="FractalDimSE">Fractal Dimension Standard Error: </label>
+                <input type="number" required
+                       placeholder="Fractal Dimension Standard Error..."
+                       name="frac_dim_se" />
+
+
+
+
+            <div class="container3">
+                   <label for="RadiusWorst">Radius Worst: </label>
+                <input type="number" required
+                       placeholder="Radius Worst..."
+                       name="radius_worst" />
+
+                <label for="TextureWorst">Texture Worst: </label>
+                <input type="number" required
+                       placeholder="Texture Worst..."
+                       name="texture_worst" />
+
+                <label for="PerimeterWorst">Perimeter Worst: </label>
+                <input type="number" required
+                       placeholder="Perimeter Worst..."
+                       name="perimeter_worst" />
+
+                <label for="AreaWorst">Area Worst: </label>
+                <input type="number" required
+                       placeholder="Area Worst..."
+                       name="area_worst" />
+
+                <label for="SmoothnessWorst">Smoothness Worst: </label>
+                <input type="number" required
+                       placeholder="Smoothness Worst..."
+                       name="smoothness_worst" />
+
+                <label for="CompactnessWorst">Compactness Worst: </label>
+                <input type="number" required
+                       placeholder="Compactness Worst..."
+                       name="compactness_worst" />
+
+                <label for="ConcavityWorst">Concavity Standard Error: </label>
+                <input type="number" required
+                       placeholder="Concavity Standard Error..."
+                       name="concavity_worst" />
+
+                <label for="ConcavePointsSE">Concave Points Worst: </label>
+                <input type="number" required
+                       placeholder="Concave Points Worst..."
+                       name="concave_point_worst" />
+
+                <label for="SymmetryWorst">Symmetry Worst: </label>
+                <input type="number" required
+                       placeholder="Symmetry Worst..."
+                       name="symmetry_worst" />
+
+                <label for="FractalDimWorst">Fractal Dimension Worst: </label>
+                <input type="number" required
+                       placeholder="Fractal Dimension Worst..."
+                       name="frac_dim_worst" />
+
+
+                <br />
+                <br />
+                <input type="submit" value="Predict" id="calc_btn" />
+                <br />
+            </div>
+            <div class="alert">
+                {{ predict }}
+            </div>
+            </form>
+    </div>
+
+
+
+
+</body>
+
+<footer>
+    <p>© 2023 - University of Canberra ST1_Capstone - Project - Trimester 2. All Rights Reserved.
+</footer>
+</html>
+<!--#Reference-->
+<!--#Author: Unknown-->
+<!--#Date: Trimester 1 2023-->
+<!--#Title: Program called Heart Disease Predictor Capstone Project-->
+<!--#Version 1-->
+<!--#Source Code-->
+<!--&lt;!&ndash;#Template used from https://uclearn.canberra.edu.au/courses/14056/pages/week-10-project-assignment-workshop?module_item_id=1064187&ndash;&gt;-->
